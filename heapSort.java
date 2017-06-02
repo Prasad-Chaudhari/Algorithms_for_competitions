@@ -1,8 +1,11 @@
-import java.util.*;
-class solve 
+class Heapsort 
 {    
     private static int N;
     static int [] a2;
+    public Heapsort(int n,int [] a){
+        N=n;
+        a2=a;
+    }
     public static void sort(int [] arr){
         heapify(arr);        
         for (int i = N; i > 0; i--)
@@ -39,47 +42,5 @@ class solve
         a2[i]=a2[i]^a2[j];
         a2[j]=a2[i]^a2[j];
         a2[i]=a2[i]^a2[j];
-    }
-
-    public static void main(String[] args) 
-    {
-        Scanner in = new Scanner( System.in );            
-        int t=in.nextInt();
-        while(t-->0){
-            int n=in.nextInt();
-            int [] p=new int[n];
-            int [] b=new int[n];
-            for(int i=0;i<n;i++){
-                p[i]=in.nextInt();
-                b[i]=i+1;
-            }
-            a2=b;
-            sort(p);
-            ArrayList<LinkedList<Integer>> a=new ArrayList<LinkedList<Integer>>();
-            for(int i=0;i<=n;i++){
-                a.add(new LinkedList<Integer>());
-                a.get(i).add(i);
-            }
-            for(int i=0;i<n-1;i++){
-                int b2=in.nextInt();
-                int c=in.nextInt();
-                a.get(b2).add(c);
-                a.get(c).add(b2);
-            }
-            for(int i=1;i<=n;i++){
-                LinkedList b2=a.get(i);
-                int j;
-                for(j=n-1;j>=0;j--){
-                    if(!b2.contains(b[j])){
-                        System.out.print(b[j]+" ");
-                        break;
-                    }
-                }
-                if(j==-1){
-                    System.out.print("0 ");
-                }
-            }
-            System.out.println();
-        }
     }    
 }
