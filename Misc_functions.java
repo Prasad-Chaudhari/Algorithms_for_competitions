@@ -12,3 +12,9 @@ public static ArrayList<LinkedList<Integer>> getGraph(Scanner in, int n,int m){
 	}
 	return a;
 }
+public static void print(int []a){
+	for(int i:a){
+		System.out.print(i+" ");
+	}
+	System.out.println();
+}
