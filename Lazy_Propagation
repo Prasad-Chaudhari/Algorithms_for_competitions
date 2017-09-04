@@ -1,9 +1,8 @@
 class LazyProp{
     int n;
     int tree[];
-    public SegmentTree(int si){
-        n=si;
-        double x=Math.log(n)/Math.log(2);
+    public LazyProp(int si){
+        double x=Math.log(si)/Math.log(2);
         n=(int)(Math.pow(2,Math.ceil(x)))+1;
         tree=new int[n];
     }
@@ -45,5 +44,4 @@ class LazyProp{
         }
         System.out.println();
     }
-    
 }
