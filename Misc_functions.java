@@ -12,9 +12,19 @@ public static ArrayList<LinkedList<Integer>> getGraph(Scanner in, int n,int m){
 	}
 	return a;
 }
+//print values in a array
 public static void print(int []a){
 	for(int i:a){
 		System.out.print(i+" ");
 	}
 	System.out.println();
+}
+// long to String partial
+public static String longToBitString(long l){
+	String s="";
+	while(l>0){
+		s=s+l%2;
+		l/=2;
+	}
+	return s;
 }
