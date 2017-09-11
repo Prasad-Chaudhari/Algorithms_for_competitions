@@ -19,12 +19,12 @@ public static void print(int []a){
 	}
 	System.out.println();
 }
-// long to String partial
-public static String longToBitString(long l){
+// long to String partial to the base of k
+public static String baseChangeString(long l,int k){
 	String s="";
 	while(l>0){
-		s=s+l%2;
-		l/=2;
+		s=s+l%k;
+		l/=k;
 	}
 	return s;
 }
