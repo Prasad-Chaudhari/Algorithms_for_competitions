@@ -28,3 +28,14 @@ public static String baseChangeString(long l,int k){
 	}
 	return s;
 }
+// check if the string is pallindrome
+public static boolean isPallindrome(String s){
+	char c[]=s.toCharArray();
+	int n=c.length;
+	for(int i=0;i<=n/2;i++){
+		if(c[i]!=c[n-1-i]){
+			return false;
+		}
+	}
+	return true;
+}
