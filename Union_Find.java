@@ -1,10 +1,12 @@
 class UnionFind{
+    int noOfComponents;
     int component[];
     int size[];
     int n;
     ArrayList<LinkedList<Integer>> members;
     public UnionFind(int p){
         n=p;
+        noOfComponents=n;
         component=new int[n+1];
         size=new int[n+1];
         members=new ArrayList<LinkedList<Integer>>();
@@ -34,5 +36,6 @@ class UnionFind{
             membersofb.add(member);
         }
         size[b]=size[b]+size[a];
+        noOfComponents--;
     }
 }
