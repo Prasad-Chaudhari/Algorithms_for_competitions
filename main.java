@@ -1,117 +1,43 @@
+/* package codechef; // don't place package name! */
+ 
 import java.util.*;
-class sol {
-    public static void main(String[] args) {
-        Scanner in = new Scanner(System.in);
-        int n=in.nextInt();
-        char [] vowels={'a','e','i','o','u'};
-        char [] consonants={'b','c','d','f','g','h','j','k','l','m','n','p','q','r','s','t','v','w','x','z'};
-        if(n==1){
-            for(char a:vowels){
-                System.out.println(a);
-            }
-            for(char a:consonants){
-                System.out.println(a);
-            }
+import java.lang.*;
+import java.io.*;
+ 
+/* Name of the class has to be "Main" only if the class is public. */
+class Codechef
+{
+    public static void main (String[] args) throws java.lang.Exception
+    {
+        Scanner in = new Scanner(new File("TC5"));
+        int t=in.nextInt();
+        double ans []=new double[t];
+        double ss[]=new double[t];
+        double bb[]=new double[t];
+        double pp[]=new double[t];
+        PrintWriter writer = new PrintWriter("OC5_java.txt", "UTF-8");
+        for(int i=0;i<t;i++){
+            ss[i]=in.nextDouble();
+            bb[i]=in.nextDouble();
+            pp[i]=in.nextDouble();
+            double s=ss[i];
+            double b=bb[i];
+            double p =pp[i];
+            double a = Math.log((s-b)/(s-b/2));
+            double f = Math.log(1-p);
+            ans[i]=(Math.floor(a/f));
+            writer.println(ans[i]);
         }
-        if(n==2){
-            for(char a:vowels){
-                for(char b:consonants){
-                    System.out.println(a+""+b);
-                }
-            }
-            for(char a:consonants){
-                for(char b:vowels){
-                    System.out.println(a+""+b);
-                }
-            }
+        in = new Scanner(new File("OC5"));
+        double correct[]=new double[t];
+        for(int i=0;i<t;i++){
+            correct[i]=in.nextDouble();
         }
-        if(n==3){
-            for(char a:vowels){
-                for(char b:consonants){
-                    for(char c:vowels){
-                        System.out.println(a+""+b+""+c);
-                    }
-                }
-            }
-            for(char a:consonants){
-                for(char b:vowels){
-                    for(char c:consonants){
-                        System.out.println(a+""+b+""+c);                        
-                    }
-                }
-            }
-        }
-        if(n==4){
-            for(char a:vowels){
-                for(char b:consonants){
-                    for(char c:vowels){
-                        for(char d:consonants){
-                            System.out.println(a+""+b+""+c+""+d);                            
-                        }
-                    }
-                }
-            }
-            for(char a:consonants){
-                for(char b:vowels){
-                    for(char c:consonants){
-                        for(char d:vowels){
-                            System.out.println(a+""+b+""+c+""+d);                            
-                        }
-                    }
-                }
-            }
-        }
-        if(n==5){
-            for(char a:vowels){
-                for(char b:consonants){
-                    for(char c:vowels){
-                        for(char d:consonants){
-                            for(char e:vowels){
-                                System.out.println(a+""+b+""+c+""+d+""+e);
-                            }
-                        }
-                    }
-                }
-            }
-            for(char a:consonants){
-                for(char b:vowels){
-                    for(char c:consonants){
-                        for(char d:vowels){
-                            for(char e:consonants){
-                                System.out.println(a+""+b+""+c+""+d+""+e);
-                            }
-                        }
-                    }
-                }
-            }
-        }
-        if(n==6){
-            for(char a:vowels){
-                for(char b:consonants){
-                    for(char c:vowels){
-                        for(char d:consonants){
-                            for(char e:vowels){
-                                for(char f:consonants){
-                                    System.out.println(a+""+b+""+c+""+d+""+e+""+f);
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-            for(char a:consonants){
-                for(char b:vowels){
-                    for(char c:consonants){
-                        for(char d:vowels){
-                            for(char e:consonants){
-                                for(char f:vowels){
-                                    System.out.println(a+""+b+""+c+""+d+""+e+""+f);
-                                }
-                            }
-                        }
-                    }
-                }
+        for(int i=0;i<t;i++){
+            if(ans[i]!=correct[i]){
+                System.out.println(i+" "+ss[i]+" "+bb[i]+" "+pp[i]+" "+ans[i]+" "+correct[i]+" ");
             }
         }
     }
-}   
+}
+ 
