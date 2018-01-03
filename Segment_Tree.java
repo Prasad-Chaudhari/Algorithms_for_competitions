@@ -2,9 +2,10 @@ class SegmentTree{
     int [] tree;
     int [] array;
     public void getArray(int [] a){
+        array=a;
         int si=a.length;
         double x=Math.log(si)/Math.log(2);
-        n=(int)(Math.pow(2,Math.ceil(x)+1))+1;
+        int n=(int)(Math.pow(2,Math.ceil(x)+1))+1;
         tree=new int[n];
     }
     public void build(int start,int end,int pos){
