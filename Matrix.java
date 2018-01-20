@@ -84,7 +84,7 @@ public class Matrix {
         }
         if (mat.getRows() == 2) {
             return mat.getValueAt(0, 0) * mat.getValueAt(1, 1)
-                    - mat.getValueAt(1, 0) * mat.getValueAt(0, 1);
+                   - mat.getValueAt(1, 0) * mat.getValueAt(0, 1);
         }
         double sum = 0.0;
         for (int i = 0; i < mat.getRows(); i++) {
@@ -134,7 +134,7 @@ public class Matrix {
     public Matrix multiplyMatrix(Matrix mat) {
         if (this.getColumns() != mat.getRows()) {
             System.out.println("Can't be multipied."
-                    + " Please check the dimensional of the Matrices");
+                               + " Please check the dimensional of the Matrices");
             return new Matrix(0, 0);
         } else {
             Matrix mul = new Matrix(this.getRows(), mat.getColumns());
