@@ -43,7 +43,7 @@ class Heap {
     }
 
     public void swap(int i, int j) {
-        Trainer temp = heap[i];
+        temp = heap[i];
         heap[i] = heap[j];
         heap[j] = temp;
     }
@@ -51,10 +51,6 @@ class Heap {
     public int delete_max() {
         if (size == 0) {
             return 0;
-        }
-        if (heap[0].l > 1) {
-            heap[0].l--;
-            return heap[0];
         } else {
             int max = heap[0];
             heap[0] = heap[size - 1];

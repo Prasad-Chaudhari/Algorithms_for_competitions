@@ -1,13 +1,12 @@
-from datetime import datetime, timedelta
+import youtube_dl
 
-t = timedelta(seconds = int(raw_input())*60)
-h, m = raw_input().split()
-d = datetime(1999, 1, 1, int(h), int(m), 0, 0)
-i =0
-while True:
-	if datetime.strftime(d,"%H:%M").find('7') != -1:
-		print i
-		break;
-	d = d-t
-	i+=1
-
+ydl_opts = {
+    'format': 'bestaudio/best',
+    'postprocessors': [{
+        'key': 'FFmpegExtractAudio',
+        'preferredcodec': 'mp3',
+        'preferredquality': '192',
+    }],
+}
+with youtube_dl.YoutubeDL(ydl_opts) as ydl:
+    ydl.download(['https://www.youtube.com/watch?v=Pmj44V2H4f8'])

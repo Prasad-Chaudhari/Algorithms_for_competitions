@@ -1,5 +1,6 @@
 /**
-*Use Stack for dsf
+    * Use Stack for DSF
+    * Use Queue for BSF
 */
 
 class Graph {

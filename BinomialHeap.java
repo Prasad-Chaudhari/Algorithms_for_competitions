@@ -5,7 +5,7 @@
 
 class BinomialHeap {
 
-	private Map<Integer, Node> trees;
+	private final Map<Integer, Node> trees;
 	private int size;
 
 	//Constructor
@@ -46,7 +46,7 @@ class BinomialHeap {
 		size--;
 	}
 
-	public void merge(BinomialHeap a, BinomialHeap b) {
+	public void merge(BinomialHeap b) {
 		int size = b.size();
 		int i = 0;
 		while (size > 0) {
@@ -54,11 +54,11 @@ class BinomialHeap {
 				Node tree1 = trees.get(i);
 				Node tree2 = b.getSubTree(i);
 				if (tree1 != null) {
-					a.deleteSubTree(i);
+					deleteSubTree(i);
 					Node mergedTree = mergeTrees(tree1, tree2);
-					a.addSubTree(i + 1, mergedTree);
+					addSubTree(i + 1, mergedTree);
 				} else {
-					a.addSubTree(i, tree2);
+					addSubTree(i, tree2);
 				}
 			}
 			size = size >> 1;
@@ -70,7 +70,11 @@ class BinomialHeap {
 		return size;
 	}
 
-	Node mergeTrees(Node a, Node b) {
+	public Node getSubTree(int order) {
+		return trees.get(order);
+	}
+
+	private Node mergeTrees(Node a, Node b) {
 		if (a.getValue() < b.getValue()) {
 			a.addChild(b);
 			return a;
@@ -80,7 +84,7 @@ class BinomialHeap {
 		}
 	}
 
-	void addSubTree(int order, Node tree) {
+	private void addSubTree(int order, Node tree) {
 		while (trees.containsKey(order)) {
 			tree = mergeTrees(tree, trees.get(order));
 			deleteSubTree(order);
@@ -89,7 +93,7 @@ class BinomialHeap {
 		trees.put(order, tree);
 	}
 
-	void addAllSiblings(Node n) {
+	private void addAllSiblings(Node n) {
 		if (n != null) {
 			addAllSiblings(n.getSibling());
 			n.setSibling(null);
@@ -97,62 +101,59 @@ class BinomialHeap {
 		}
 	}
 
-	Node getSubTree(int order) {
-		return trees.get(order);
-	}
-
-	void deleteSubTree(int order) {
+	private void deleteSubTree(int order) {
 		trees.remove(order);
 	}
-}
 
-class Node {
+	private class Node {
 
-	private Node sibling;
-	private Node child;
-	private int value;
-	private int order;
+		private Node sibling;
+		private Node child;
+		private int order;
+		private final int value;
 
-	//Construtor
-	public Node(int value) {
-		this.value = value;
-		sibling = null;
-		child = null;
-		order = 0;
-	}
+		//Construtor
+		public Node(int value) {
+			this.value = value;
+			sibling = null;
+			child = null;
+			order = 0;
+		}
 
-	// Public methods
-	public void addChild(Node a) {
-		if (child == null) {
-			child = a;
-		} else {
-			a.sibling = child;
+		// Public methods
+		public void addChild(Node a) {
+			if (child == null) {
+				child = a;
+			} else {
+				a.sibling = child;
+				child = a;
+			}
+			order++;
+		}
+
+		public int getValue() {
+			return value;
+		}
+
+		public int getOrder() {
+			return order;
+		}
+
+		public Node getChildren() {
+			return child;
+		}
+
+		public Node getSibling() {
+			return sibling;
+		}
+
+		public void setSibling(Node a) {
+			sibling = a;
+		}
+
+		public void setChild(Node a) {
 			child = a;
 		}
-		order++;
-	}
-
-	public int getValue() {
-		return value;
-	}
-
-	public int getOrder() {
-		return order;
-	}
-
-	public Node getChildren() {
-		return child;
-	}
-
-	public Node getSibling() {
-		return sibling;
-	}
-
-	public void setSibling(Node a) {
-		sibling = a;
-	}
-
-	public void setChild(Node a) {
-		child = a;
 	}
 }
+

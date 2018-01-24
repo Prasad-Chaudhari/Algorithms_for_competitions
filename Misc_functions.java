@@ -42,3 +42,15 @@ public static boolean isPallindrome(String s) {
 	}
 	return true;
 }
+
+// GCD of two Numbers
+public int gcd(int x, int y) {
+	if (y > x) {
+		return gcd(y, x);
+	}
+	if (y == 0) {
+		return x;
+	} else {
+		return gcd(y, x % y);
+	}
+}

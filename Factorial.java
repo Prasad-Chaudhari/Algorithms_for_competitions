@@ -4,8 +4,8 @@ class Factorial {
     long inv_fac[];
     
     public Factorial(int n, long m) {
-        fac[] = new long[n + 1];
-        inv_fac[] = new long[n + 1];
+        fac = new long[n + 1];
+        inv_fac = new long[n + 1];
         fac[0] = 1;
         inv_fac[0] = 1;
         for (int i = 1; i <= n; i++) {
