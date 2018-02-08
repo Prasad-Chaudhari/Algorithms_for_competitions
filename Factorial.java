@@ -1,7 +1,6 @@
 class Factorial {
 
-    long fac[];
-    long inv_fac[];
+    long fac[],inv_fac[];
     
     public Factorial(int n, long m) {
         fac[] = new long[n + 1];
