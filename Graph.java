@@ -1,13 +1,10 @@
 /**
-    * Use Stack for DSF
-    * Use Queue for BSF
+*Use Stack for dsf
 */
 
 class Graph {
 
-    int [] level;
-    int [] parent;
-    int [] connected;
+    int [] level,parent,connected;
     int n;
     Queue<Integer> q;
     Stack<Integer> st;

@@ -3,10 +3,10 @@ class LazyProp {
     int n;
     int tree[];
 
-    public LazyProp(int n) {
-        double x = Math.log(n) / Math.log(2);
-        this.n = (int)(Math.pow(2, Math.ceil(x) + 1)) + 1;
-        tree = new int[this.n];
+    public LazyProp(int si) {
+        double x = Math.log(si) / Math.log(2);
+        n = (int)(Math.pow(2, Math.ceil(x) + 1)) + 1;
+        tree = new int[n];
     }
 
     public void insert(int s, int e, int pos, int l, int r, int d) {

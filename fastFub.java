@@ -7,11 +7,11 @@ class fastFub{
 		if(n==2){
 			return 1;
 		}
+		long f1=fub(n/2,m);
+		long f2=fub(n/2+1,m);
 		if(map.containsKey(n)){
 			return map.get(n);
 		}
-		long f1=fub(n/2,m);
-		long f2=fub(n/2+1,m);
 		if(n%2==0){
 		    long f=((f1*f1)%m+(f2*f2)%m)%m;
 		    map.put(n,f); 	

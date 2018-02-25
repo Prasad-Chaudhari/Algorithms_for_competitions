@@ -1,8 +1,7 @@
 class SegmentTree {
 
-    int [] tree;
-    int [] array;
-
+    private int [] tree,array;
+    
     public void getArray(int [] a) {
         array = a;
         int si = a.length;
@@ -10,7 +9,7 @@ class SegmentTree {
         int n = (int)(Math.pow(2, Math.ceil(x) + 1)) + 1;
         tree = new int[n];
     }
-
+    
     public void build(int start, int end, int pos) {
         if (start == end) {
             tree[pos] = array[start];
@@ -21,7 +20,7 @@ class SegmentTree {
             tree[pos] = Math.max(tree[2 * pos], tree[2 * pos + 1]);
         }
     }
-
+    
     public void update(int start, int end, int pos, int idx, int x) {
         if (start == end) {
             array[start] = x;
@@ -36,7 +35,7 @@ class SegmentTree {
             tree[pos] = Math.max(tree[2 * pos], tree[2 * pos + 1]);
         }
     }
-
+    
     public int query(int start, int end, int pos, int l, int r) {
         if (start > r || end < l) {
             return 0;
@@ -49,5 +48,12 @@ class SegmentTree {
             int b = query(mid + 1, end, 2 * pos + 1, l, r);
             return Math.max(a, b);
         }
+    }
+    
+    public void printTree() {
+        for (int i = 0; i <= 2 * array.length; i++) {
+            System.out.println(i + " " + tree[i]);
+        }
+        System.out.println();
     }
 }
