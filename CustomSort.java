@@ -1,5 +1,7 @@
 class Data {
+
 	int a, b;
+
 	public Data(int a, int b) {
 		this.a = a;
 		this.b = b;
@@ -15,7 +17,7 @@ class Com implements Comparator<Data> {
 				return a.b - b.b;
 			}
 		} else {
-			return a.a - b.b;
+			return a.a - b.a;
 		}
 	}
 }

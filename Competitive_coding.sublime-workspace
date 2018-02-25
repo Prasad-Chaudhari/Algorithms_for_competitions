@@ -4,6 +4,174 @@
 		"selected_items":
 		[
 			[
+				"per",
+				"person"
+			],
+			[
+				"no",
+				"nodes\tfunction"
+			],
+			[
+				"person",
+				"person_nodes"
+			],
+			[
+				"add",
+				"add_edge\tfunction"
+			],
+			[
+				"ran",
+				"random\tmodule"
+			],
+			[
+				"nod",
+				"node\tstatement"
+			],
+			[
+				"cl",
+				"clrs\tparam"
+			],
+			[
+				"fo",
+				"foci_nodes\tstatement"
+			],
+			[
+				"number",
+				"number_of_nodes\tfunction"
+			],
+			[
+				"nodes",
+				"nodes\tfunction"
+			],
+			[
+				"as",
+				"assign_BMI\tfunction"
+			],
+			[
+				"vi",
+				"visualize\tfunction"
+			],
+			[
+				"crea",
+				"create_graph\tfunction"
+			],
+			[
+				"lis",
+				"list_of_tuples"
+			],
+			[
+				"dict",
+				"dict1\tstatement"
+			],
+			[
+				"com",
+				"communities_brute\tfunction"
+			],
+			[
+				"max",
+				"max_index\tstatement"
+			],
+			[
+				"ma",
+				"max_index\tstatement"
+			],
+			[
+				"ra",
+				"ratio\tstatement"
+			],
+			[
+				"num",
+				"num_inter_edge\tstatement"
+			],
+			[
+				"num_",
+				"num_intra_edge1\tstatement"
+			],
+			[
+				"fi",
+				"first_community"
+			],
+			[
+				"iter",
+				"itertools\tmodule"
+			],
+			[
+				"a",
+				"append\tfunction"
+			],
+			[
+				"create",
+				"create_average_instance\tfunction"
+			],
+			[
+				"creat",
+				"create_instance\tfunction"
+			],
+			[
+				"cera",
+				"create_instance\tfunction"
+			],
+			[
+				"st",
+				"stddev"
+			],
+			[
+				"pe",
+				"percolates"
+			],
+			[
+				"S",
+				"StdStats"
+			],
+			[
+				"tr",
+				"trails"
+			],
+			[
+				"St",
+				"StdStats"
+			],
+			[
+				"im",
+				"import"
+			],
+			[
+				"b",
+				"boolean"
+			],
+			[
+				"re",
+				"return"
+			],
+			[
+				"is",
+				"isOpen"
+			],
+			[
+				"co",
+				"count_of_degrees\tstatement"
+			],
+			[
+				"uni",
+				"unique_degrees\tstatement"
+			],
+			[
+				"dijkstr",
+				"dijkstra_path_length\tfunction"
+			],
+			[
+				"pri",
+				"print\tkeyword"
+			],
+			[
+				"p",
+				"primes"
+			],
+			[
+				"in",
+				"b_inv"
+			],
+			[
 				"two",
 				"twos1"
 			],
@@ -20,16 +188,8 @@
 				"dp10"
 			],
 			[
-				"st",
-				"static"
-			],
-			[
 				"fin",
 				"findall\tfunction"
-			],
-			[
-				"ma",
-				"match\tfunction"
 			],
 			[
 				"ne",
@@ -42,10 +202,6 @@
 			[
 				"String",
 				"StringTokenizer"
-			],
-			[
-				"in",
-				"inv_fac"
 			],
 			[
 				"time",
@@ -80,16 +236,8 @@
 				"mergeTrees"
 			],
 			[
-				"add",
-				"addSubTree"
-			],
-			[
 				"de",
 				"deleteSubTree"
-			],
-			[
-				"re",
-				"return"
 			],
 			[
 				"pu",
@@ -112,20 +260,8 @@
 				"nextLong"
 			],
 			[
-				"co",
-				"cost"
-			],
-			[
-				"ra",
-				"raw_input\tfunction"
-			],
-			[
 				"str",
 				"start"
-			],
-			[
-				"p",
-				"pu\tpublic"
 			],
 			[
 				"ap",
@@ -158,10 +294,6 @@
 			[
 				"mar",
 				"margin"
-			],
-			[
-				"lis",
-				"list-style-type"
 			],
 			[
 				"di",
@@ -244,16 +376,8 @@
 				"serializer"
 			],
 			[
-				"S",
-				"SnippetSerializers"
-			],
-			[
 				"Sni",
 				"Snippet"
-			],
-			[
-				"St",
-				"STYLE_CHOICES"
 			],
 			[
 				"La",
@@ -268,55 +392,32 @@
 	"buffers":
 	[
 		{
-			"file": "main.java",
+			"file": "/home/prasad/Desktop/nptel_Social_Network/program4.py",
 			"settings":
 			{
-				"buffer_size": 6509,
+				"buffer_size": 1049,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "CoordinateGeometry.java",
+			"file": "/home/prasad/Desktop/nptel_Social_Network/program5.py",
 			"settings":
 			{
-				"buffer_size": 129,
+				"buffer_size": 923,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "BinomialHeap.java",
+			"contents": "import networkx as nx\nimport matplotlib.pyplot as plt\nimport random\n\n\ndef create_graph():\n\tg = nx.Graph()\n\t# g.add_nodes_from(range(1,101))\n\tfor i in range(1,101):\n\t\tg.add_node(i)\n\treturn g\n\ndef visualize(g,labeldict,nsize,clrs):\n\tnx.draw(g,labels=labeldict,node_size=nsize,node_color=clrs)\n\tplt.show()\n\n\ndef assign_BMI(g):\n\tfor node in g.node():\n\t\tg.node[node]['name'] = random.randint(15,40)\n\t\tg.node[node]['type'] = 'person'\n\ndef get_labels(g):\n\tdict1 ={}\n\tfor node in g.nodes():\n\t\tdict1[node] = g.node[node]['name']\n\treturn dict1\n\ndef get_size(g):\n\ta = []\n\tfor node in g.node():\n\t\tif g.node[node]['type']=='person':\n\t\t\ta.append(g.node[node]['name']*20)\n\t\telse:\n\t\t\ta.append(2000)\n\treturn a\n\n\ndef add_foci_nodes(g):\n\tn = g.number_of_nodes()\n\ti = n+1\n\tfoci_nodes = ['gym','eatout','movie','karate','yoga']\n\tfor j in range(0,5):\n\t\tg.add_node(i)\n\t\tg.node[i]['name'] = foci_nodes[j]\n\t\tg.node[i]['type'] = 'foci'\n\t\ti+=1\n\ndef get_colors(g):\n\ta=[]\n\tfor node in g.nodes():\n\t\tif g.node[node]['type']=='person':\n\t\t\tif g.node[node]['name']==15:\n\t\t\t\ta.append('green')\n\t\t\telif g.node[node]['name']==40:\n\t\t\t\ta.append('yellow')\n\t\t\telse:\n\t\t\t\ta.append('blue')\n\t\telse:\n\t\t\ta.append('red')\n\treturn a\n\ndef get_foci_nodes():\n\ta = []\n\tfor node in g.nodes():\n\t\tif g.node[node]['type'] == 'foci':\n\t\t\ta.append(node)\n\treturn a\n\ndef get_person_nodes():\n\ta = []\n\tfor node in g.nodes():\n\t\tif g.node[node]['type'] == 'person':\n\t\t\ta.append(node)\n\treturn a\n\ndef add_foci_edges(g):\n\tfoci_nodes =get_foci_nodes()\n\tperson_nodes =get_person_nodes()\n\n\tfor node in person_nodes:\n\t\tr = random.choice(foci_nodes)\n\t\tg.add_edge(node, r)\n\ndef homophily(g):\n\tpnodes = get_person_nodes()\n\tfor u in pnodes:\n\t\tfor v in pnodes:\n\t\t\tif u!=v:\n\t\t\t\tdiff  = abs(g.node[u]['name']-g.node[v]['name'])\n\t\t\t\tprob = float(1)/(diff+10000)\n\t\t\t\tr = random.uniform(0, 1)\n\t\t\t\tif r < prob:\n\t\t\t\t\tg.add_edge(u,v)\ndef closure(g):\n\ta = []\n\tfor u in g.nodes():\n\t\tfor v in g.nodes():\n\t\t\tif u!=v and (g.node[u]['type']=='person' or g.node[v]['type']=='person'):\n\t\t\t\tk = cmn()\n\n\n\ng = create_graph()\nassign_BMI(g)\nadd_foci_nodes(g)\nlabeldict = get_labels(g)\nnodesize = get_size(g)\ncolor = get_colors(g)\nadd_foci_edges(g)\n\nvisualize(g,labeldict,nodesize,color)\n\n# homophily(g)\nclosure(g):\n\nvisualize(g,labeldict,nodesize,color)",
+			"file": "/home/prasad/Desktop/nptel_Social_Network/Week4/program1.py",
+			"file_size": 2211,
+			"file_write_time": 131637106121961320,
 			"settings":
 			{
-				"buffer_size": 2702,
+				"buffer_size": 2252,
 				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "main.py",
-			"settings":
-			{
-				"buffer_size": 415,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "SegmentTree.java",
-			"settings":
-			{
-				"buffer_size": 1545,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "Misc_functions.java",
-			"settings":
-			{
-				"buffer_size": 1098,
 				"line_ending": "Unix"
 			}
 		}
@@ -365,14 +466,25 @@
 	],
 	"file_history":
 	[
+		"/home/prasad/Desktop/nptel_Social_Network/program.py",
+		"/home/prasad/Desktop/nptel_Social_Network/program3.py",
+		"/home/prasad/Desktop/nptel_Social_Network/program2.py",
+		"/home/prasad/Desktop/home_codes/main.java",
+		"/home/prasad/Desktop/Percolation.java",
+		"/home/prasad/Desktop/PercolationStats.java",
+		"/home/prasad/Downloads/percolation-testing.zip",
+		"/home/prasad/Desktop/home_codes/main.py",
+		"/home/prasad/Desktop/nptel_Social_Network/program1.py",
+		"/home/prasad/Desktop/home_codes/Misc_functions.java",
+		"/home/prasad/Desktop/home_codes/SegmentTree.java",
+		"/home/prasad/Desktop/home_codes/BinomialHeap.java",
+		"/home/prasad/Desktop/home_codes/CoordinateGeometry.java",
 		"/home/prasad/Desktop/home_codes/fastFub.java",
 		"/home/prasad/Desktop/home_codes/Max_sum_submatrix.java",
 		"/home/prasad/Desktop/home_codes/MinSpanningTree_kruskal.java",
 		"/home/prasad/Desktop/home_codes/Factorial.java",
-		"/home/prasad/Desktop/home_codes/Misc_functions.java",
 		"/home/prasad/Desktop/home_codes/pow_a_n_m.java",
 		"/home/prasad/Desktop/home_codes/UnionFind.java",
-		"/home/prasad/Desktop/home_codes/SegmentTree.java",
 		"/home/prasad/Desktop/home_codes/QuickSort.java",
 		"/home/prasad/Desktop/home_codes/LinkedList2.java",
 		"/home/prasad/Desktop/home_codes/LazyPropagation.java",
@@ -381,12 +493,10 @@
 		"/home/prasad/Desktop/home_codes/CustomSort.java",
 		"/home/prasad/Desktop/home_codes/vector.java",
 		"/home/prasad/Desktop/home_codes/segmentTree.java",
-		"/home/prasad/Desktop/home_codes/BinomialHeap.java",
 		"/home/prasad/Desktop/home_codes/Matrix.java",
 		"/home/prasad/Desktop/home_codes/HeapSort.java",
 		"/home/prasad/Desktop/home_codes/Graph.java",
 		"/home/prasad/Desktop/home_codes/Heap.java",
-		"/home/prasad/Desktop/home_codes/main.py",
 		"/home/prasad/Desktop/home_codes/Lazy_Propagation.java",
 		"/home/prasad/Desktop/home_codes/factorial.java",
 		"/home/prasad/Desktop/home_codes/Class_Graph.java",
@@ -395,7 +505,6 @@
 		"/home/prasad/Desktop/home_codes/main.c",
 		"/home/prasad/Desktop/home_codes/Lazy_Propagation",
 		"/home/prasad/Desktop/home_codes/OC3",
-		"/home/prasad/Desktop/home_codes/main.java",
 		"/home/prasad/Desktop/eduhub-backend/Eduhub/school/models.py",
 		"/home/prasad/Desktop/eduhub-backend/Eduhub/administration/methods.py",
 		"/home/prasad/Desktop/new_Raftar/home.html",
@@ -424,6 +533,8 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"get_people_nodes",
+			"bytes",
 			"1",
 			"R",
 			"];\n",
@@ -468,119 +579,29 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 2,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "main.java",
+					"file": "/home/prasad/Desktop/nptel_Social_Network/program4.py",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 6509,
+						"buffer_size": 1049,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1488,
-								1488
+								930,
+								930
 							]
 						],
 						"settings":
 						{
-							"git_gutter_is_enabled": true,
-							"syntax": "Packages/Java/Java.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 648.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "CoordinateGeometry.java",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 129,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								127,
-								127
-							]
-						],
-						"settings":
-						{
-							"git_gutter_is_enabled": true,
-							"syntax": "Packages/Java/Java.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "BinomialHeap.java",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2702,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1995,
-								1995
-							]
-						],
-						"settings":
-						{
-							"git_gutter_is_enabled": true,
-							"syntax": "Packages/Java/Java.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 1580.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "main.py",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 415,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								230,
-								230
-							]
-						],
-						"settings":
-						{
-							"git_gutter_is_enabled": true,
+							"git_gutter_is_enabled": false,
 							"show_definitions": false,
 							"syntax": "Packages/Djaneiro/Syntaxes/Python Django.tmLanguage"
 						},
@@ -588,68 +609,67 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 4,
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "SegmentTree.java",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1545,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								754,
-								754
-							]
-						],
-						"settings":
-						{
-							"git_gutter_is_enabled": true,
-							"syntax": "Packages/Java/Java.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 378.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 5,
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "Misc_functions.java",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1098,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								414,
-								525
-							]
-						],
-						"settings":
-						{
-							"git_gutter_is_enabled": true,
-							"syntax": "Packages/Java/Java.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
 					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "/home/prasad/Desktop/nptel_Social_Network/program5.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 923,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								923,
+								923
+							]
+						],
+						"settings":
+						{
+							"git_gutter_is_enabled": false,
+							"show_definitions": false,
+							"syntax": "Packages/Djaneiro/Syntaxes/Python Django.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 140.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "/home/prasad/Desktop/nptel_Social_Network/Week4/program1.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2252,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2002,
+								2002
+							]
+						],
+						"settings":
+						{
+							"git_gutter_is_enabled": false,
+							"show_definitions": false,
+							"syntax": "Packages/Djaneiro/Syntaxes/Python Django.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 1346.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
 					"type": "text"
 				}
 			]
