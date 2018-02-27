@@ -10,7 +10,7 @@ class Node {
 
 class LinkedList2 {
 
-    Node head,tail;
+    Node head, tail;
     int length;
 
     public LinkedList2() {

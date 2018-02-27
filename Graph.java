@@ -4,7 +4,7 @@
 
 class Graph {
 
-    int [] level,parent,connected;
+    int [] level, parent, connected;
     int n;
     Queue<Integer> q;
     Stack<Integer> st;
