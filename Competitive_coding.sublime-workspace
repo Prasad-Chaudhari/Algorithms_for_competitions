@@ -407,7 +407,7 @@
 			"file": "/home/prasad/Desktop/nptel_Social_Network/Week5/schelling_model.py",
 			"settings":
 			{
-				"buffer_size": 185,
+				"buffer_size": 2652,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -585,15 +585,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 185,
+						"buffer_size": 2652,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								185,
-								185
+								0,
+								0
 							]
 						],
 						"settings":
