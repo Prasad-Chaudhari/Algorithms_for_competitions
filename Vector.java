@@ -1,19 +1,16 @@
+class Point {
 
+    int x, y, z;
+
+    public Point(int x, int y, int z) {
+        this.x = x;
+        this.y = y;
+        this.z = z;
+    }
+}
 class Vector {
 
-    private class Point {
-
-        int x, y, z;
-
-        public Point(int x, int y, int z) {
-            this.x = x;
-            this.y = y;
-            this.z = z;
-        }
-    }
-
     Point r = new Point(0, 0, 0);
-
     //constructor
     public Vector(Point head, Point tail) {
         r.x = head.x - tail.x;
@@ -24,7 +21,6 @@ class Vector {
     public Vector(Point head) {
         r = head;
     }
-
     //Methods
     public Point getVector() {
         return r;
@@ -39,7 +35,11 @@ class Vector {
         return new Vector(r, b);
     }
 
-    public int dotProduct(Vector b) {
+    public void subtract(Vector a) {
+        this = subtract(a);
+    }
+
+    public int dotProduct (Vector b) {
         Point a2 = r;
         Point b2 = b.getVector();
         return a2.x * b2.x + a2.y * b2.y + a2.z * b2.z;
@@ -63,9 +63,9 @@ class Vector {
     }
 
     public double angle(Vector v) {
-        int cp = dotProduct(v);
-        double lena = length();
-        double lenb = v.length();
+        int cp = dotProduct(b);
+        int lena = length();
+        int lenb = v.length();
         return Math.acos(cp / (lena * lenb));
     }
 }

@@ -1,29 +1,15 @@
-
-class Primes {
-
-    public static int[] getPrimes(int n) {
-        boolean[] c = new boolean[n + 1];
-        int nop = 0;
-        int root = (int) (Math.sqrt(n) + 1);
-        for (int i = 2; i <= root; i++) {
-            if (!c[i]) {
-                for (int j = i * i; j <= n; j = j + i) {
-                    c[j] = true;
-                }
-            }
+boolean [] c = new boolean[1000001];
+int [] primes = new int[1000000];
+int nop = 0;
+for (int i = 2; i <= 1000; i++) {
+    if (!c[i]) {
+        for (int j = i * i; j <= 1000000; j = j + i) {
+            c[j] = !false;
         }
-        for (int i = 2; i < n; i++) {
-            if (!c[i]) {
-                nop++;
-            }
-        }
-        int[] primes = new int[nop];
-        nop = 0;
-        for (int i = 2; i < n; i++) {
-            if (!c[i]) {
-                primes[nop++] = i;
-            }
-        }
-        return primes;
+    }
+}
+for (int i = 2; i < 1000000; i++) {
+    if (!c[i]) {
+        primes[nop++] = i;
     }
 }
