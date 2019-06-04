@@ -1,6 +1,7 @@
+
 class QuickSort {
 
-    int [] a;
+    int[] a;
 
     public QuickSort(int b[], int left, int right) {
         a = b;
