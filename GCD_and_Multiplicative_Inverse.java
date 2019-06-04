@@ -1,7 +1,5 @@
-
 /**
  * Source : https://www.geeksforgeeks.org/multiplicative-inverse-under-modulo-m/
- *
  * @author PRASAD
  */
 class GCD {
@@ -11,9 +9,6 @@ class GCD {
     }
 
     public long a_inv_b(long a, long m) {
-        long g = calc_gcd(a, m);
-        a /= g;
-        m /= g;
         if (gcd(a, m) == 1) {
             long m0 = m;
             long y = 0, x = 1;

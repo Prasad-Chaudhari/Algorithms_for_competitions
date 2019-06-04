@@ -1,4 +1,3 @@
-
 class Heap {
 
     int heap[] = new int[100001];
@@ -44,7 +43,7 @@ class Heap {
     }
 
     public void swap(int i, int j) {
-        int temp = heap[i];
+        Trainer temp = heap[i];
         heap[i] = heap[j];
         heap[j] = temp;
     }
@@ -53,13 +52,13 @@ class Heap {
         if (size == 0) {
             return 0;
         }
-        if (heap[0] > 1) {
-            heap[0]--;
+        if (heap[0].l > 1) {
+            heap[0].l--;
             return heap[0];
         } else {
             int max = heap[0];
             heap[0] = heap[size - 1];
-            heap[size - 1] = Integer.MIN_VALUE;
+            heap[size - 1] = null;
             size--;
             maxheap(0);
             return 0 - max;

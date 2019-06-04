@@ -1,7 +1,3 @@
-
-import java.util.ArrayList;
-import java.util.LinkedList;
-
 class UnionFind {
 
     private int noOfComponents, n;
@@ -27,11 +23,6 @@ class UnionFind {
     }
 
     public void union(int a, int b) {
-        a = find(a);
-        b = find(b);
-        if (a == b) {
-            return;
-        }
         if (size[a] > size[b]) {
             a = a ^ b;
             b = a ^ b;
