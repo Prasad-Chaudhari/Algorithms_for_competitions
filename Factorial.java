@@ -1,8 +1,7 @@
 class Factorial {
 
-    long fac[];
-    long inv_fac[];
-    
+    long fac[], inv_fac[];
+
     public Factorial(int n, long m) {
         fac[] = new long[n + 1];
         inv_fac[] = new long[n + 1];
@@ -13,7 +12,7 @@ class Factorial {
             inv_fac[i] = pow_mod(fac[i], m - 2, m);
         }
     }
-    
+
     long pow_mod(long a, long n, long m) {
         if (n == 0) {
             return 1;

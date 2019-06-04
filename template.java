@@ -1,15 +1,24 @@
-import java.util.*;
-import java.lang.*;
-import java.io.*;
+
+/**
+ * Date: 2 Mar, 2018
+ * Link : http://codeforces.com/contest/900/problem/A
+ *
+ * @author Prasad-Chaudhari
+ * @email prasadc8897@gmail.com
+ */
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 
 public class Solution {
 
-	public static void main (String[] args) throws java.lang.Exception {
-		FastIO2 in = new FastIO2();
-		
-	}
-	
-	static class FastIO2 {
+    public static void main (String[] args) throws java.lang.Exception {
+        FastIO2 in = new FastIO2();
+        
+    }
+
+    static class FastIO2 {
 
         private final BufferedReader br;
         private String s[];
