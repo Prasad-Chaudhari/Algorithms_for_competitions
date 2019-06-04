@@ -1,3 +1,4 @@
+
 class LazyProp {
 
     int n;
@@ -5,7 +6,7 @@ class LazyProp {
 
     public LazyProp(int si) {
         double x = Math.log(si) / Math.log(2);
-        n = (int)(Math.pow(2, Math.ceil(x) + 1)) + 1;
+        n = (int) (Math.pow(2, Math.ceil(x) + 1)) + 1;
         tree = new int[n];
     }
 
